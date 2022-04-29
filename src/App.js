@@ -12,7 +12,7 @@ function App() {
         <Search></Search>
         <ul className="divide-y divide-gray-200">
            {
-             appoinmentList.map(appointment => <AppointmentInfo/>)
+             appoinmentList.map(appointment => <AppointmentInfo key={appointment.id} appointment={appointment}/>)
            }
         </ul>
     </div>
