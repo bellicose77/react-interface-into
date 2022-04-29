@@ -1,7 +1,8 @@
 import React from 'react';
 import {BiTrash} from 'react-icons/bi'
 
-const AppointmentInfo = () => {
+const AppointmentInfo = ({appointment}) => {
+    const {petName,ownerName,aptDate}=appointment
     return (
         <li className="px-3 py-3 flex items-start">
       <button type="button"
@@ -9,11 +10,11 @@ const AppointmentInfo = () => {
         <BiTrash /></button>
       <div className="flex-grow">
         <div className="flex items-center">
-          <span className="flex-none font-medium text-2xl text-blue-500"></span>
+          <span className="flex-none font-medium text-2xl text-blue-500">{petName}</span>
           <span className="flex-grow text-right"></span>
         </div>
-        <div><b className="font-bold text-blue-500">Owner:</b> </div>
-        <div className="leading-tight"></div>
+        <div><b className="font-bold text-blue-500">Owner:{ownerName}</b> </div>
+        <div className="leading-tight">{aptDate}</div>
       </div>
     </li>
     );
