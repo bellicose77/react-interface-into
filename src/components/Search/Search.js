@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {BiSearch,BiCaretDown,BiCheck} from 'react-icons/bi'
 
 const DropDown = () =>{
@@ -27,6 +27,7 @@ const DropDown = () =>{
 }
 
 const Search = () => {
+  const [toggleSort,setToggleSort]=useState(false);
     return (
         <div className="py-5">
         <div className="mt-1 relative rounded-md shadow-sm">
