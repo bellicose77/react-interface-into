@@ -4,7 +4,9 @@ import {BiCalendarPlus} from 'react-icons/bi'
 const Appoinment = () => {
   const [toggleForm,setToggleForm]=useState(false);
   const handletoggle=()=>{
-    
+    const toggle =!(toggleForm);
+    setToggleForm(toggle);
+
   }
 
     return (
