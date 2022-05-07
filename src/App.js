@@ -48,7 +48,13 @@ function App() {
       <h1 className="text-5xl mb-3">
         <BiCalendar className="inline-block text-red-500 align-top" />Your Appointments</h1>
         <Appoinment></Appoinment>
-        <Search query={query} onChangeQuery={onChangeQuery}></Search>
+        <Search query={query} 
+        onChangeQuery={onChangeQuery}
+        sortBy={sortBy}
+        orderBy={orderBy}
+        >
+
+        </Search>
         <ul className="divide-y divide-gray-200">
            {
              filteredAppoinment.map(appointment => <AppointmentInfo key={appointment.id}
