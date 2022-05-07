@@ -30,13 +30,13 @@ function App() {
   ).sort((a,b)=>{
     let order = (orderBy==='asc') ? 1 : -1;
     return (
-      a[sortBy].toLocaleLowerCase() < b[sortBy].toLocaleLowerCase() 
+      a[sortBy]?.toLocaleLowerCase() < b[sortBy]?.toLocaleLowerCase() 
       ? -1 * order : 1 * order
 
     )
   });
   const onSortChange=(mySort)=>{
-    // console.log(mySort);
+    console.log(mySort);
     setSortBy(mySort);
 
   }
