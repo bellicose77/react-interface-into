@@ -16,7 +16,16 @@ function App() {
     console.log("delete button",id);
     const deletedata=appoinmentList.filter(appointment=>(appointment.id!==id))
     setAppoinmentList(deletedata);
-  }
+  };
+  const filteredAppoinment = appoinmentList.filter(
+    item=>{
+      return (
+        item.petName.toLowerCase().includes(query.toLocaleLowerCase())||
+        item.ownerName.toLowerCase().includes(query.toLocaleLowerCase())||
+        item.aptNotes.toLowerCase().includes(query.toLocaleLowerCase())
+      )
+    }
+  )
   const fetchData = useCallback(()=>{
     fetch('./data.json')
     .then(res=>res.json())
@@ -33,7 +42,7 @@ function App() {
         <Search query={query} onChangeQuery={onChangeQuery}></Search>
         <ul className="divide-y divide-gray-200">
            {
-             appoinmentList.map(appointment => <AppointmentInfo key={appointment.id}
+             filteredAppoinment.map(appointment => <AppointmentInfo key={appointment.id}
               deleteHandler={deleteHandler} appointment={appointment}/>)
            }
         </ul>
