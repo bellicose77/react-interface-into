@@ -6,6 +6,8 @@ import Search from './components/Search/Search';
 function App() {
   const [appoinmentList,setAppoinmentList]=useState([]);
   const [query,setQuery]=useState("");
+  const[sortBy,setSortBy]=useState("petName");
+  const[orderBy,setOrderBy]=useState('asc');
 
   const onChangeQuery=(myQuery)=>{
    
@@ -25,7 +27,9 @@ function App() {
         item.aptNotes.toLowerCase().includes(query.toLocaleLowerCase())
       )
     }
-  )
+  ).sort((a,b)=>{
+    let order = (orderBy==='asc')? 1: -1
+  })
   const fetchData = useCallback(()=>{
     fetch('./data.json')
     .then(res=>res.json())
