@@ -28,7 +28,12 @@ function App() {
       )
     }
   ).sort((a,b)=>{
-    let order = (orderBy==='asc')? 1: -1
+    let order = (orderBy==='asc') ? 1 : -1;
+    return (
+      a[sortBy].toLocaleLowerCase() < b[sortBy].toLocaleLowerCase() 
+      ? -1 * order : 1 * order
+
+    )
   })
   const fetchData = useCallback(()=>{
     fetch('./data.json')
