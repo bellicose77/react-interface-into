@@ -15,9 +15,9 @@ const DropDown = ({toggleSort,sortBy,orderBy,onOrderChange,onSortChange}) =>{
         <div onClick={()=>onSortChange('ownerName')}
           className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex justify-between cursor-pointer"
           role="menuitem">Owner Name{(sortBy==='ownerName') && <BiCheck/>}</div>
-        <div onClick={()=>onSortChange('Date')}
+        <div onClick={()=>onSortChange('aptDate')}
           className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex justify-between cursor-pointer"
-          role="menuitem">Date {(sortBy==='Date') && <BiCheck/>}</div>
+          role="menuitem">Date {(sortBy==='aptDate') && <BiCheck/>}</div>
         <div onClick={()=>onOrderChange('Asc')}
           className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex justify-between cursor-pointer border-gray-1 border-t-2"
           role="menuitem">Asc {(orderBy==='Asc') && <BiCheck/>}</div>
