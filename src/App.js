@@ -34,7 +34,14 @@ function App() {
       ? -1 * order : 1 * order
 
     )
-  })
+  });
+  const onSortChange=(mySort)=>{
+    console.log("sort");
+
+  }
+  const onOrderChange = (mySort)=>{
+    console.log("order")
+  }
   const fetchData = useCallback(()=>{
     fetch('./data.json')
     .then(res=>res.json())
