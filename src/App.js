@@ -8,7 +8,8 @@ function App() {
   const [query,setQuery]=useState("");
   const onChangeQuery=(e)=>{
    const inputData= e.target.value;
-   console.log(inputData);
+   setQuery(inputData);
+   console.log(query);
   }
   const deleteHandler = (id)=>{
     console.log("delete button",id);

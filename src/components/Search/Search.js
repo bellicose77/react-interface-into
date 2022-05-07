@@ -29,7 +29,7 @@ const DropDown = ({toggleSort}) =>{
     )
 }
 
-const Search = () => {
+const Search = ({onChangeQuery}) => {
   const [toggleSort,setToggleSort]=useState(false);
     return (
         <div className="py-5">
