@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {BiSearch,BiCaretDown,BiCheck} from 'react-icons/bi'
 
-const DropDown = ({toggleSort}) =>{
+const DropDown = ({toggleSort,sortBy,orderBy,onOrderChange,onSortChange}) =>{
   if(!toggleSort){
     return null;
   }
