@@ -5,8 +5,8 @@ import AppointmentInfo from './components/AppointmentInfo/AppointmentInfo';
 import Search from './components/Search/Search';
 function App() {
   const [appoinmentList,setAppoinmentList]=useState([]);
-  const deleteHandler = ()=>{
-    console.log("delete button");
+  const deleteHandler = (id)=>{
+    console.log("delete button",id);
   }
   const fetchData = useCallback(()=>{
     fetch('./data.json')
