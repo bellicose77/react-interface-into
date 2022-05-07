@@ -59,6 +59,8 @@ function App() {
         onChangeQuery={onChangeQuery}
         sortBy={sortBy}
         orderBy={orderBy}
+        onSortChange={onSortChange}
+        onOrderChange={onOrderChange}
         >
 
         </Search>
