@@ -6,6 +6,8 @@ const Appoinment = () => {
     petName:'',
     ownerName:'',
     aptDate:'',
+    aptTime:'',
+    aptNotes:''
   }
   const [toggleForm,setToggleForm]=useState(false);
   const[formdata,setFormData]=useState(clearData)
