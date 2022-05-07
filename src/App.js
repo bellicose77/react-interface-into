@@ -5,6 +5,9 @@ import AppointmentInfo from './components/AppointmentInfo/AppointmentInfo';
 import Search from './components/Search/Search';
 function App() {
   const [appoinmentList,setAppoinmentList]=useState([]);
+  const deleteHandler = ()=>{
+    console.log("delete button");
+  }
   const fetchData = useCallback(()=>{
     fetch('./data.json')
     .then(res=>res.json())
@@ -21,7 +24,8 @@ function App() {
         <Search></Search>
         <ul className="divide-y divide-gray-200">
            {
-             appoinmentList.map(appointment => <AppointmentInfo key={appointment.id} appointment={appointment}/>)
+             appoinmentList.map(appointment => <AppointmentInfo key={appointment.id}
+              deleteHandler={deleteHandler} appointment={appointment}/>)
            }
         </ul>
     </div>
