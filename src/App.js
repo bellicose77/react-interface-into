@@ -5,6 +5,11 @@ import AppointmentInfo from './components/AppointmentInfo/AppointmentInfo';
 import Search from './components/Search/Search';
 function App() {
   const [appoinmentList,setAppoinmentList]=useState([]);
+  const [query,setQuery]=useState("");
+  const onChangeQuery=(e)=>{
+   const inputData= e.target.value;
+   console.log(inputData);
+  }
   const deleteHandler = (id)=>{
     console.log("delete button",id);
     const deletedata=appoinmentList.filter(appointment=>(appointment.id!==id))
@@ -23,7 +28,7 @@ function App() {
       <h1 className="text-5xl mb-3">
         <BiCalendar className="inline-block text-red-500 align-top" />Your Appointments</h1>
         <Appoinment></Appoinment>
-        <Search></Search>
+        <Search onChangeQuery={onChangeQuery}></Search>
         <ul className="divide-y divide-gray-200">
            {
              appoinmentList.map(appointment => <AppointmentInfo key={appointment.id}
