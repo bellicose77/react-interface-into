@@ -7,7 +7,8 @@ function App() {
   const [appoinmentList,setAppoinmentList]=useState([]);
   const deleteHandler = (id)=>{
     console.log("delete button",id);
-    appoinmentList.filter(appointment=>setAppoinmentList(appointment.id!==id))
+    const deletedata=appoinmentList.filter(appointment=>(appointment.id!==id))
+    setAppoinmentList(deletedata);
   }
   const fetchData = useCallback(()=>{
     fetch('./data.json')
