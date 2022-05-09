@@ -15,6 +15,9 @@ const Appoinment = () => {
     const toggle =!(toggleForm);
     setToggleForm(toggle);
 
+  };
+  const handleInputData = () =>{
+    
   }
 
     return (
@@ -29,7 +32,10 @@ const Appoinment = () => {
             Owner Name
           </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
-            <input type="text" name="ownerName" id="ownerName"
+            <input type="text" 
+            name="ownerName" 
+            id="ownerName"
+            onChange={handleInputData}
               className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md" />
           </div>
         </div>
