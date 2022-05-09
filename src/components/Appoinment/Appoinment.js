@@ -16,8 +16,8 @@ const Appoinment = () => {
     setToggleForm(toggle);
 
   };
-  const handleInputData = () =>{
-    
+  const handleInputData = (e) =>{
+    const nameField = e.target.name;
   }
 
     return (
