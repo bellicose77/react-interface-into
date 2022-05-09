@@ -18,6 +18,8 @@ const Appoinment = () => {
   };
   const handleInputData = (e) =>{
     const nameField = e.target.name;
+    const valueInput=e.target.value;
+    console.log(valueInput)
   }
 
     return (
