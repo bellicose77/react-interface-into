@@ -47,7 +47,7 @@ const Appoinment = () => {
             Pet Name
           </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
-            <input type="text" name="petName" id="petName"
+            <input type="text" name="petName" id="petName" onChange={handleInputData}
               className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md" />
           </div>
         </div>
@@ -57,7 +57,7 @@ const Appoinment = () => {
             Apt Date
           </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
-            <input type="date" name="aptDate" id="aptDate"
+            <input type="date" name="aptDate" id="aptDate" onChange={handleInputData}
               className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md" />
           </div>
         </div>
@@ -67,7 +67,7 @@ const Appoinment = () => {
             Apt Time
           </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
-            <input type="time" name="aptTime" id="aptTime"
+            <input type="time" name="aptTime" id="aptTime" onChange={handleInputData}
               className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md" />
           </div>
         </div>
@@ -77,7 +77,7 @@ const Appoinment = () => {
             Appointment Notes
           </label>
           <div className="mt-1 sm:mt-0 sm:col-span-2">
-            <textarea id="aptNotes" name="aptNotes" rows="3"
+            <textarea id="aptNotes" name="aptNotes" rows="3" onChange={handleInputData}
               className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Detailed comments about the condition"></textarea>
           </div>
         </div>
