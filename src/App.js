@@ -20,8 +20,8 @@ function App() {
     setAppoinmentList(deletedata);
   };
    
-  const onSendData=()=>{
-    console.log("submit button");
+  const onSendData=(myData)=>{
+    setAppoinmentList([...appoinmentList,myData]);
   }
   const filteredAppoinment = appoinmentList.filter(
     item=>{
