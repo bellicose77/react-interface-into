@@ -30,6 +30,7 @@ const Appoinment = () => {
     aptDate:formdata.aptDate + '' + formdata.aptDate ,
     aptNotes:formdata.aptNotes
     }
+    onSendData(appoinmentInfo)
 
   }
 
