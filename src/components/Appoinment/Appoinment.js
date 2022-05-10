@@ -27,7 +27,7 @@ const Appoinment = () => {
     const appoinmentInfo = {
     petName:formdata.petName,
     ownerName:formdata.ownerName,
-    aptDate:'',
+    aptDate:formdata.aptDate'',
     aptNotes:''
     }
 
