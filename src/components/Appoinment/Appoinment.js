@@ -19,8 +19,11 @@ const Appoinment = () => {
   const handleInputData = (e) =>{
     const nameField = e.target.name;
     const valueInput=e.target.value;
-    setFormData({...formdata,[nameField]:valueInput})
+    setFormData({...formdata,[nameField]:valueInput});
     console.log(formdata);
+  }
+  const handleSubmit = () =>{
+    
   }
 
     return (
