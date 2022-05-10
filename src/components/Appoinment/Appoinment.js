@@ -25,7 +25,7 @@ const Appoinment = () => {
   const handleSubmit = (e) =>{
     e.preventDefault();
     const appoinmentInfo = {
-      petName:'',
+    petName:formdata.petName,
     ownerName:'',
     aptDate:'',
     aptTime:'',
