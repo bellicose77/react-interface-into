@@ -32,7 +32,7 @@ const Appoinment = () => {
     }
     onSendData(appoinmentInfo);
     setFormData(clearData);
-    setToggleForm(!toggleForm)
+    setToggleForm(!toggleForm);
     
 
   }

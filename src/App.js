@@ -19,6 +19,10 @@ function App() {
     const deletedata=appoinmentList.filter(appointment=>(appointment.id!==id))
     setAppoinmentList(deletedata);
   };
+   
+  const onSendData=()=>{
+    console.log("submit button");
+  }
   const filteredAppoinment = appoinmentList.filter(
     item=>{
       return (
@@ -56,7 +60,7 @@ function App() {
     <div className="App container mx-auto mt-3 font-thin">
       <h1 className="text-5xl mb-3">
         <BiCalendar className="inline-block text-red-500 align-top" />Your Appointments</h1>
-        <Appoinment></Appoinment>
+        <Appoinment onSendData={onSendData}></Appoinment>
         <Search query={query} 
         onChangeQuery={onChangeQuery}
         sortBy={sortBy}
